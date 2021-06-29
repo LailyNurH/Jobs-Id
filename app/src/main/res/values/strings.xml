@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">FP_MP</string>
+    <string name="don_t_have_an_account_sign_up">Don’t have an account ? <b>Sign Up</b></string>
+    <string name="already_have_an_account_sign_up">Already have an account ? <b>Sign In</b></string>
+    <string name="or">Or</string>
+    <string name="log_in">Log In</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="log_in_to_your_existant_account_of_jobs_id">Log in to your existant account of Jobs.Id</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="let_s_get_started">Let’s Get Started!</string>
+    <string name="create_an_account_to_jobs_id_to_get_all_features">Create an account to Jobs.id to get all features</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="new_job">New Job</string>
+    <string name="popular_jobs">Popular Jobs</string>
+    <string name="find_your_dream_jobs">Find Your Dream Jobs</string>
+    <string name="hello">Hello !</string>
+</resources>

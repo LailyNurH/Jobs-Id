@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_margin="25dp"
+        app:cardBackgroundColor="#337AD7"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/pjob_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinssb"
+                android:text="Job Tittle"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/psalary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_below="@id/pjob_title"
+                android:text="Salary"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppinsmedium"
+                android:textColor="@color/white"
+                />
+
+            <ImageView
+                android:id="@+id/pimage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="25dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"/>
+            <TextView
+                android:id="@+id/pcompany"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Company"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@id/pimage"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="40dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/poppinssemibold"/>
+            <TextView
+                android:id="@+id/plocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/pimage"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Location"
+                android:layout_marginBottom="20dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
