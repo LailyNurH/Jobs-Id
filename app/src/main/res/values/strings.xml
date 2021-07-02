@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FP_MP</string>
+    <string name="app_name">Jobs.ID</string>
     <string name="don_t_have_an_account_sign_up">Don’t have an account ? <b>Sign Up</b></string>
     <string name="already_have_an_account_sign_up">Already have an account ? <b>Sign In</b></string>
     <string name="or">Or</string>
@@ -18,4 +18,5 @@
     <string name="popular_jobs">Popular Jobs</string>
     <string name="find_your_dream_jobs">Find Your Dream Jobs</string>
     <string name="hello">Hello !</string>
+
 </resources>

@@ -46,7 +46,7 @@ public class JobRepository {
                 });
         return data;
     }
-    public LiveData<List<Job>> addJob (String job_title, String company, String location, String desc_job, String salary, String images ) {
+    public LiveData<List<Job>> addJob(String job_title, String company, String location, String desc_job, String salary, String images) {
 
         final MutableLiveData<List<Job>> data = new MutableLiveData<>();
 
@@ -54,7 +54,7 @@ public class JobRepository {
                 .enqueue(new Callback<List<Job>>() {
                     @Override
                     public void onResponse(Call<List<Job>> call, Response<List<Job>> response) {
-                        Log.d(TAG, "onResponse response : " + response);
+                        Log.d(TAG, "Add Job Succes : " + response);
 
                         if (response.body() != null){
                             data.setValue(response.body());
@@ -66,6 +66,7 @@ public class JobRepository {
                     @Override
                     public void onFailure(Call<List<Job>> call, Throwable t) {
                         data.setValue(null);
+                        Log.d(TAG, "Add Job Error : " + call);
                     }
                 });
 

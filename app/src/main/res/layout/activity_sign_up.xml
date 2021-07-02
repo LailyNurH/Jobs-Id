@@ -46,17 +46,7 @@
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/include2"
         app:layout_constraintTop_toTopOf="parent" />
-    <EditText
-        android:id="@+id/R_nama"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="35dp"
-        android:layout_marginTop="35dp"
-        android:hint="Nama"
-        android:background="@drawable/et_bg"
-        android:padding="15dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:layout_editor_absoluteX="35dp" />
+
 
     <EditText
         android:id="@+id/R_email"
@@ -67,7 +57,7 @@
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:padding="15dp"
-        app:layout_constraintTop_toBottomOf="@+id/R_nama"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:layout_editor_absoluteX="35dp" />
 
     <EditText
@@ -82,8 +72,8 @@
         app:layout_constraintTop_toBottomOf="@+id/R_email"
         tools:layout_editor_absoluteX="35dp" />
 
-    <Button
-        android:id="@+id/button"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -91,7 +81,8 @@
         android:fontFamily="@font/poppinssb"
         android:paddingStart="40dp"
         android:paddingEnd="40dp"
-        android:text="@string/log_in"
+        android:text="@string/sign_up"
+        android:onClick="onUpClick"
         android:textColor="#fff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
@@ -102,12 +93,12 @@
         android:id="@+id/tv_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/poppinsmedium"
         android:text="@string/already_have_an_account_sign_up"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/signup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

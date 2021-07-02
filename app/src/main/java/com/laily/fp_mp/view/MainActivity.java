@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ProgressBar;
 
 import com.laily.fp_mp.R;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private PopularViewModel popularViewModel;
     private JobAdapter jobAdapter;
     private PopularAdapter popularAdapter;
-    private RecyclerView rvJob,rvhorizontal;
+    private RecyclerView rvJob, rvhorizontal;
     private ProgressBar progressBar;
     LinearLayoutManager HorizontalLayout;
 
@@ -37,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
+
 
         init();
         initpopularjob();
@@ -50,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         popularViewModel.getPopularLiveData().observe(this, popularResponse -> {
             if (popularResponse != null) {
 
-                List<Popular> popularResponses  = popularResponse;
+                List<Popular> popularResponses = popularResponse;
                 popularAdapter.submitList(popularResponses);
 
             }
@@ -58,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initpopularjob() {
-        popularViewModel =ViewModelProviders.of(this).get(PopularViewModel.class);
+        popularViewModel = ViewModelProviders.of(this).get(PopularViewModel.class);
         rvhorizontal = findViewById(R.id.horizontalRV);
         popularAdapter = new PopularAdapter();
 //        rvhorizontal.setLayoutManager(new LinearLayoutManager.HORIZONTAL(this));
@@ -70,15 +74,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupView() {
 
-            jobAdapter.setOnItemClickListener((view, job, position) -> {
+        jobAdapter.setOnItemClickListener((view, job, position) -> {
 
-                Intent i = new Intent(this, DetailJobActivity.class);
-                i.putExtra(KEY_INTENT_JOB, job);
-                startActivity(i);
-            });
+            Intent i = new Intent(this, DetailJobActivity.class);
+            i.putExtra(KEY_INTENT_JOB, job);
+            startActivity(i);
+        });
     }
 
-    private void init(){
+    private void init() {
         jobViewModel = ViewModelProviders.of(this).get(JobViewModel.class);
 
         rvJob = findViewById(R.id.rvWebService);
@@ -87,13 +91,14 @@ public class MainActivity extends AppCompatActivity {
         rvJob.setLayoutManager(new LinearLayoutManager(this));
 
     }
-    private void getAllJob(){
+
+    private void getAllJob() {
         progressBar.setVisibility(View.VISIBLE);
         rvJob.setAdapter(jobAdapter);
         jobViewModel.getJobLiveData().observe(this, jobResponse -> {
             if (jobResponse != null) {
 
-                List<Job> jobResponses  = jobResponse;
+                List<Job> jobResponses = jobResponse;
 //                Call<List<Job>> jobResponses  = jobResponse.getJob();
                 jobAdapter.setJobList(jobResponses);
                 progressBar.setVisibility(View.GONE);

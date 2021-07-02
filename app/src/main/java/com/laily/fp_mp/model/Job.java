@@ -11,7 +11,7 @@ public class Job implements Serializable {
     private String desc_job;
     private String salary;
     private String images;
-    private String how_to_apply;
+
 
     public Integer getId_job() {
         return id_job;
@@ -69,11 +69,4 @@ public class Job implements Serializable {
         this.images = images;
     }
 
-    public String getHow_to_apply() {
-        return how_to_apply;
-    }
-
-    public void setHow_to_apply(String how_to_apply) {
-        this.how_to_apply = how_to_apply;
-    }
 }

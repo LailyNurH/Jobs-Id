@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CompanyActivity">
+    tools:context=".view.CompanyActivity">
 
     <TextView
         android:id="@+id/textView8"
@@ -144,7 +144,25 @@
                 android:textColor="@android:color/black"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tInputHowto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tInputKapasitas"
+            app:layout_constraintVertical_chainStyle="packed">
 
+            <EditText
+                android:id="@+id/etHowto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Link How To Apply"
+                android:inputType="text"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
     <Button

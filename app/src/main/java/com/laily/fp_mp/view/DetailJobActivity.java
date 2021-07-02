@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -32,6 +33,8 @@ public class DetailJobActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_job);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
         init();
         setupView();
     }
@@ -50,7 +53,6 @@ public class DetailJobActivity extends AppCompatActivity {
         if (getIntent().hasExtra(KEY_INTENT_JOB)) {
             Job job = (Job) getIntent().getSerializableExtra(KEY_INTENT_JOB);
 
-//            idoom = room.getIdRoom();
             idjob = job.getId_job();
             dcompany.setText( job.getCompany());
             ddesc.setText(job.getDesc_job());
@@ -62,8 +64,8 @@ public class DetailJobActivity extends AppCompatActivity {
                     .into(dimages);
 
             howto.setOnClickListener(v -> {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(job.getHow_to_apply()));
-                startActivity(intent);
+//                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(job.getHow_to_apply()));
+//                startActivity(intent);
             });
         }
     }

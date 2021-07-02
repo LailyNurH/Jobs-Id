@@ -41,8 +41,6 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.ViewHolder> {
         itemClick = callback;
     }
 
-
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull  ViewGroup parent, int viewType) {

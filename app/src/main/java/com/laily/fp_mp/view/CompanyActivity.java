@@ -1,20 +1,18 @@
-package com.laily.fp_mp;
+package com.laily.fp_mp.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import com.laily.fp_mp.R;
 import com.laily.fp_mp.model.Job;
-import com.laily.fp_mp.view.MainActivity;
-import com.laily.fp_mp.viewModel.AddJobViewModel;
 import com.laily.fp_mp.viewModel.JobViewModel;
 
 import static com.laily.fp_mp.util.Constant.KEY_INTENT_JOB;
@@ -31,6 +29,8 @@ public class CompanyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_company);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
 
         init();
         setup();
